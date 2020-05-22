@@ -5,6 +5,7 @@ import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -36,13 +37,45 @@ public class returnVal {
 
     }
 
+    public List<String> listOfNames(){
+        List<Gepek> akt = new ArrayList<>();
+
+        akt = getGepek();
+
+        ArrayList<String> names = new ArrayList<>();
+
+
+        int size = akt.size();
+
+        for ( int i =0; i < size ; i++)
+        {
+            names.add(akt.get(i).getNev());
+        }
+        return names;
+    }
+
     public String myReturn()
 
     {
-       /* Gepek aktGep = new Gepek();
+
+        /*
+        String exp;
+        List<Gepek> akt = new ArrayList<>();
+
+        akt = getGepek();
+
+
+        int size = akt.size();
+
+        for ( int i =0; i < size ; i++)
+        {
+            System.out.print(akt.get(i).getNev());
+        }
+        Gepek aktGep = new Gepek();
         aktGep = getGepek().get(1);
         String p  = aktGep.getNev();*/
-        String s = getTools().stream().map(Tools::toString).collect(Collectors.joining(",\n "));
-        return s;
+       // String s = getTools().stream().map(Tools::toString).collect(Collectors.joining(",\n "));
+
+        return listOfNames().get(1);
     }
 }

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyController">
     <children>
-        <Button fx:id="writeButt" layoutX="397.0" layoutY="304.0" mnemonicParsing="false" onAction="#iras" prefHeight="36.0" prefWidth="170.0" text="List of Machines" />
-        <Label fx:id="myLabel" layoutX="14.0" layoutY="23.0" prefHeight="257.0" prefWidth="561.0" />
-        <TextField fx:id="myText" layoutX="397.0" layoutY="360.0" />
+        <Button fx:id="writeButt" layoutX="25.0" layoutY="335.0" mnemonicParsing="false" onAction="#iras" prefHeight="41.0" prefWidth="156.0" text="List of Machines" />
+        <Label fx:id="myLabel" layoutX="469.0" layoutY="23.0" prefHeight="185.0" prefWidth="106.0" />
+      <Button fx:id="reportButton" layoutX="201.0" layoutY="335.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Get Report" visible="false" />
+      <Button fx:id="addButton" layoutX="433.0" layoutY="335.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Add" />
+      <ChoiceBox layoutX="28.0" layoutY="45.0" prefHeight="29.0" prefWidth="300.0" />
     </children>
 </Pane>

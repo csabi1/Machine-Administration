@@ -8,6 +8,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
+
+
         /*
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
