@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.Pane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyController">
-   <children>
-      <Button fx:id="writeButt" layoutX="199.0" layoutY="173.0" mnemonicParsing="false" onAction="#iras" prefHeight="36.0" prefWidth="170.0" text="Hello" />
-      <Label fx:id="myLabel" layoutX="199.0" layoutY="54.0" prefHeight="51.0" prefWidth="170.0" />
-      <TextField fx:id="myText" layoutX="199.0" layoutY="126.0" />
-   </children>
+    <children>
+        <Button fx:id="writeButt" layoutX="397.0" layoutY="304.0" mnemonicParsing="false" onAction="#iras" prefHeight="36.0" prefWidth="170.0" text="List of Machines" />
+        <Label fx:id="myLabel" layoutX="14.0" layoutY="23.0" prefHeight="257.0" prefWidth="561.0" />
+        <TextField fx:id="myText" layoutX="397.0" layoutY="360.0" />
+    </children>
 </Pane>

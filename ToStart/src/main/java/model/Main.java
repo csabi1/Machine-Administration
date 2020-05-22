@@ -8,10 +8,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
+   /*     EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
 
-/*
+
+
         Gepek gep = new Gepek();
         gep.setId(1);
         gep.setNev("NagyGep");
@@ -22,15 +23,12 @@ public class Main {
         em.persist(gep);
         em.getTransaction().commit();
         System.out.println(gep.getNev());*/
-        getGepek();
+
+
 
     }
 
-    private static List<Gepek> getGepek(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
-        EntityManager em = emf.createEntityManager();
-        return em.createQuery("SELECT r FROM Gepek r", Gepek.class).getResultList();
-    }
+
 
 }
 
