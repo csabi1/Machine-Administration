@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 public class returnVal {
 
 
-    private static List<Gepek> getGepek(){
+    private static List<Machines> getMachines(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
         try{
-            return em.createQuery("select l from Gepek l ORDER BY l",Gepek.class).getResultList();
+            return em.createQuery("select l from Machines l ORDER BY l",Machines.class).getResultList();
         } finally {
             em.close();
         }
@@ -38,9 +38,9 @@ public class returnVal {
     }
 
     public List<String> listOfNames(){
-        List<Gepek> akt = new ArrayList<>();
+        List<Machines> akt = new ArrayList<>();
 
-        akt = getGepek();
+        akt = getMachines();
 
         ArrayList<String> names = new ArrayList<>();
 
@@ -49,7 +49,7 @@ public class returnVal {
 
         for ( int i =0; i < size ; i++)
         {
-            names.add(akt.get(i).getNev());
+            names.add(akt.get(i).getName());
         }
         return names;
     }

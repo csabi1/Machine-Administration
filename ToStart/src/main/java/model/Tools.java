@@ -29,6 +29,8 @@ public class Tools {
     @Column(name = "Cond")
     private String condition;
 
+    @Column(name = "Machine_ID")
+    private int machineId;
 
     @Column(name = "Weight")
     private int weight;
@@ -42,6 +44,13 @@ public class Tools {
     @Column(name ="Grade")
     private String grade;
 
+    public int getMachineId() {
+        return machineId;
+    }
+
+    public void setMachineId(int machineId) {
+        this.machineId = machineId;
+    }
 
     public int getToolId() {
         return toolId;

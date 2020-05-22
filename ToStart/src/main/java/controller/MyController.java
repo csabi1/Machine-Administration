@@ -14,6 +14,7 @@ import model.returnVal;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MyController {
@@ -36,8 +37,12 @@ public class MyController {
 
     public void iras(ActionEvent actionEvent) {
 
-        for (int i =0 ; i < val.listOfNames().size()  ;i++) {
-            listOfMach.getItems().add(val.listOfNames().get(i));
+
+        List<String> my = new ArrayList<>();
+        my = val.listOfNames();
+
+        for (int i =0 ; i < my.size()  ;i++) {
+            listOfMach.getItems().add(my.get(i));
         }
     }
 
