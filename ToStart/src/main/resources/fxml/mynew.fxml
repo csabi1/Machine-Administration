@@ -11,6 +11,6 @@
         <Label fx:id="myLabel" layoutX="469.0" layoutY="23.0" prefHeight="185.0" prefWidth="106.0" />
       <Button fx:id="reportButton" layoutX="201.0" layoutY="335.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Get Report" visible="false" />
       <Button fx:id="addButton" layoutX="433.0" layoutY="335.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Add" />
-      <ChoiceBox layoutX="28.0" layoutY="45.0" prefHeight="29.0" prefWidth="300.0" />
+      <ChoiceBox fx:id="listOfMach" layoutX="28.0" layoutY="45.0" prefHeight="29.0" prefWidth="300.0" />
     </children>
 </Pane>
