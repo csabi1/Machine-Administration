@@ -2,6 +2,7 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -29,6 +30,9 @@ public class NewValueController {
     @FXML
     private TextField addFloorSpace;
 
+    @FXML
+    private Label infoLabel;
+
     @FXML void initialize()
     {
 
@@ -51,5 +55,7 @@ public class NewValueController {
         em.getTransaction().commit();
         em.close();
         emf.close();
+
+        infoLabel.setText("Added successfully");
     }
 }

@@ -32,7 +32,7 @@ public class MyController {
 
     @FXML
     public void initialize(){
-        val = new returnVal();
+         val = new returnVal();
     }
 
     public void iras(ActionEvent actionEvent) {
@@ -40,7 +40,7 @@ public class MyController {
 
         List<String> my = new ArrayList<>();
         my = val.listOfNames();
-
+        listOfMach.getItems().clear();
         for (int i =0 ; i < my.size()  ;i++) {
             listOfMach.getItems().add(my.get(i));
         }
@@ -50,6 +50,16 @@ public class MyController {
         Parent root = FXMLLoader.load(MyApp.class.getResource("/fxml/newvalue.fxml"));
         Stage stage = new Stage();
         stage.setTitle("New Item");
+        stage.setResizable(false);
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void newToolReport(ActionEvent actionEvent) throws  IOException{
+
+        Parent root = FXMLLoader.load(MyApp.class.getResource("/fxml/toolreport.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Tool report");
         stage.setResizable(false);
         stage.setScene(new Scene(root));
         stage.show();

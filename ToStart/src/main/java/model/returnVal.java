@@ -54,6 +54,14 @@ public class returnVal {
         return names;
     }
 
+    public static List<Machines> getStaticMachines(){
+        List<Machines> allMachines = new ArrayList<>();
+
+        allMachines = getMachines();
+
+        return allMachines;
+
+    }
     public String myReturn()
 
     {
