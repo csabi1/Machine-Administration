@@ -24,22 +24,25 @@ public class returnVal {
 
     }
 
-    private static List<String> getNames(){
+    private static List<Tools> getTools(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
         try{
-            return em.createQuery("select 2 from Gepek l", String.class).getResultList();
+            return em.createQuery("select l from Tools l ORDER BY l",Tools.class).getResultList();
         } finally {
             em.close();
         }
+
+
     }
+
     public String myReturn()
 
     {
-        Gepek aktGep = new Gepek();
+       /* Gepek aktGep = new Gepek();
         aktGep = getGepek().get(1);
-        String p  = aktGep.getNev();
-   //     String s = getGepek().stream().map(Gepek::toString).collect(Collectors.joining(",\n "));
-        return p;
+        String p  = aktGep.getNev();*/
+        String s = getTools().stream().map(Tools::toString).collect(Collectors.joining(",\n "));
+        return s;
     }
 }
