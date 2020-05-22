@@ -10,9 +10,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.MyApp;
+import model.Machines;
 import model.returnVal;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +31,19 @@ public class MyController {
     @FXML
     private Label myLabel;
 
+
+    @FXML
+    private Label macName;
+    @FXML
+    private Label macId;
+    @FXML
+    private Label macMotor;
+    @FXML
+    private Label macTools;
+    @FXML
+    private Label macWeight;
+    @FXML
+    private Label macSpace;
     @FXML
     private ChoiceBox listOfMach;
 
@@ -33,6 +52,10 @@ public class MyController {
     @FXML
     public void initialize(){
          val = new returnVal();
+    }
+
+    public String selectedMachine(){
+        return (String) listOfMach.getValue();
     }
 
     public void iras(ActionEvent actionEvent) {
@@ -57,11 +80,30 @@ public class MyController {
 
     public void newToolReport(ActionEvent actionEvent) throws  IOException{
 
-        Parent root = FXMLLoader.load(MyApp.class.getResource("/fxml/toolreport.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Tool report");
-        stage.setResizable(false);
-        stage.setScene(new Scene(root));
-        stage.show();
+        List<Machines> allMachines = new ArrayList<>();
+
+        allMachines = val.getStaticMachines();
+        System.out.print(selectedMachine());
+        for (int i=0; i < allMachines.size() ; i++)
+        {
+            if (allMachines.get(i).getName().equals(selectedMachine())) {
+                macName.setText(allMachines.get(i).getName());
+
+                macId.setText(Integer.toString(allMachines.get(i).getId()));
+
+                macMotor.setText(allMachines.get(i).getMotor());
+
+                macTools.setText(Integer.toString(allMachines.get(i).getTools_count())+" db");
+
+                macSpace.setText(allMachines.get(i).getFloor_space() + " mm");
+
+                macWeight.setText(Integer.toString(allMachines.get(i).getTools_count())+" kg");
+            }
+
+        }
+
+
+
+
     }
 }

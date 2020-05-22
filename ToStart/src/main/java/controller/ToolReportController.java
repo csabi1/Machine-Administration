@@ -2,6 +2,7 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import model.returnVal;
 import model.Machines;
 import model.Tools;
@@ -13,7 +14,7 @@ import java.util.List;
 public class ToolReportController {
 
     private returnVal val;
-
+   // private MyController temp;
     @FXML
     private Label macId;
 
@@ -26,8 +27,9 @@ public class ToolReportController {
         allMachines = val.getStaticMachines();
 
         macId.setText(allMachines.get(1).getName());
-
+      //  System.out.print(getTitle());
 
 
     }
+
 }
