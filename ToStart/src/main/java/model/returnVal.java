@@ -62,7 +62,16 @@ public class returnVal {
         return allMachines;
 
     }
-    public String myReturn()
+
+    public static List<Tools> getStaticTools(){
+        List<Tools> allTools = new ArrayList<>();
+
+        allTools = getTools();
+
+        return allTools;
+
+    }
+    public String mappedTools()
 
     {
 
@@ -82,8 +91,56 @@ public class returnVal {
         Gepek aktGep = new Gepek();
         aktGep = getGepek().get(1);
         String p  = aktGep.getNev();*/
-       // String s = getTools().stream().map(Tools::toString).collect(Collectors.joining(",\n "));
+        String s = getTools().stream().map(Tools::toString).collect(Collectors.joining(",\n"));
 
-        return listOfNames().get(1);
+        return s;
+    }
+
+    public String printBuilder(int actMachine){
+
+        List<Tools> allTools = new ArrayList<>();
+
+        allTools = getStaticTools();
+
+        System.out.println(allTools.get(1).getName());
+
+        String result="";
+        for (int i = 0 ; i < allTools.size() ; i++){
+
+           // System.out.println(allTools.get(i).getMachineId());
+           //   System.out.println(actMachine);
+
+            if (allTools.get(i).getMachineId() == actMachine) {
+                System.out.println("this is happaning");
+               result += "Name: " + allTools.get(i).getName() + " Abrasion: " + allTools.get(i).getAbrasion() +"% Material: " + allTools.get(i).getMaterial() +"\n";
+
+            }
+
+        }
+        return result;
+
+
+    }
+
+    public int avrageAbrassion(int actMachine){
+
+        List<Tools> allTools = new ArrayList<>();
+
+        allTools = getStaticTools();
+
+
+        int result=0;
+        int count  = 0;
+        for ( count = 0 ; count < allTools.size() ; count++){
+
+
+            if (allTools.get(count).getMachineId() == actMachine) {
+                result += allTools.get(count).getAbrasion();
+
+
+            }
+
+        }
+        return result / (count-1);
     }
 }

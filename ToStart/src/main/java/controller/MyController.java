@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.MyApp;
@@ -34,18 +35,34 @@ public class MyController {
 
     @FXML
     private Label macName;
+
     @FXML
     private Label macId;
+
     @FXML
     private Label macMotor;
+
     @FXML
     private Label macTools;
+
     @FXML
     private Label macWeight;
+
     @FXML
     private Label macSpace;
+
+    @FXML
+    private Label toolsLabel;
+
+    @FXML
+    private Label avgAbrasion;
+
     @FXML
     private ChoiceBox listOfMach;
+
+    @FXML
+    private ProgressBar abrasionProg;
+
 
     private returnVal val;
 
@@ -84,9 +101,15 @@ public class MyController {
 
         allMachines = val.getStaticMachines();
         System.out.print(selectedMachine());
+
+        int actMachine=0;
         for (int i=0; i < allMachines.size() ; i++)
         {
             if (allMachines.get(i).getName().equals(selectedMachine())) {
+
+                actMachine = allMachines.get(i).getId() - 1;
+                System.out.println(actMachine);
+
                 macName.setText(allMachines.get(i).getName());
 
                 macId.setText(Integer.toString(allMachines.get(i).getId()));
@@ -103,7 +126,11 @@ public class MyController {
         }
 
 
-
+        //toolsLabel.setText(val.mappedTools());
+        double avgAbres = val.avrageAbrassion(actMachine);
+        toolsLabel.setText(val.printBuilder(actMachine));
+        avgAbrasion.setText(avgAbres+" %");
+        abrasionProg.setProgress(avgAbres/100);
 
     }
 }
