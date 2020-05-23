@@ -136,5 +136,18 @@ public class MyController {
         avgAbrasion.setText(avgAbresion+" %");
         abrasionProg.setProgress(avgAbresion/100);
 
+
+    }
+
+    public void startStatistics(ActionEvent actionEvent) throws IOException{
+
+        Parent root = FXMLLoader.load(MyApp.class.getResource("/fxml/statistics.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("All stats");
+        stage.setResizable(false);
+        stage.setScene(new Scene(root));
+        stage.show();
+
+
     }
 }

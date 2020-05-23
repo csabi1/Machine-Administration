@@ -71,6 +71,25 @@ public class returnVal {
         return names;
     }
 
+    public List<Integer> listOfWeight(){
+        List<Machines> akt = new ArrayList<>();
+
+        akt = getMachines();
+
+        ArrayList<Integer> weights = new ArrayList<>();
+
+
+        int size = akt.size();
+
+        for ( int i =0; i < size ; i++)
+        {
+            weights.add(akt.get(i).getWeight());
+        }
+        return weights;
+    }
+
+
+
 
     /**
      * Function that makes an ArrayList of the machine list.
