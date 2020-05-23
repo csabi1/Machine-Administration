@@ -131,10 +131,10 @@ public class MyController {
 
 
         //toolsLabel.setText(val.mappedTools());
-        double avgAbres = val.avrageAbrassion(actMachine);
+        double avgAbresion = val.avrageAbrasion(actMachine);
         toolsLabel.setText(val.printBuilder(actMachine));
-        avgAbrasion.setText(avgAbres+" %");
-        abrasionProg.setProgress(avgAbres/100);
+        avgAbrasion.setText(avgAbresion+" %");
+        abrasionProg.setProgress(avgAbresion/100);
 
     }
 }

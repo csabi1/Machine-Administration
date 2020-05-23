@@ -7,6 +7,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+/**
+ * A class that will start the first stage.
+ * */
 public class MyApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {

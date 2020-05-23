@@ -10,10 +10,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * The class that makes the the main work of the project.
+ * It connects to database and makes database requests.
+ * It also convert, and maps the given types.
+ * It calculates statistics.
+ * */
 
 public class returnVal {
 
 
+    /**
+     * Function to get, the list of machines from database.
+     * */
     private static List<Machines> getMachines(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
@@ -26,6 +35,9 @@ public class returnVal {
 
     }
 
+    /**
+     * Function to get, the list of tools from database.
+     * */
     private static List<Tools> getTools(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
@@ -38,6 +50,10 @@ public class returnVal {
 
     }
 
+    /**
+     * Function to get only the names of the machines, that was given to it by, the
+     * getTools function.
+     * */
     public List<String> listOfNames(){
         List<Machines> akt = new ArrayList<>();
 
@@ -55,6 +71,10 @@ public class returnVal {
         return names;
     }
 
+
+    /**
+     * Function that makes an ArrayList of the machine list.
+     * */
     public static List<Machines> getStaticMachines(){
         List<Machines> allMachines = new ArrayList<>();
 
@@ -64,6 +84,9 @@ public class returnVal {
 
     }
 
+    /**
+     * Function that makes an ArrayList of the tools list.
+     * */
     public static List<Tools> getStaticTools(){
         List<Tools> allTools = new ArrayList<>();
 
@@ -72,6 +95,10 @@ public class returnVal {
         return allTools;
 
     }
+
+    /**
+     * Function to map out tools for printing.
+     * */
     public String mappedTools()
 
     {
@@ -80,6 +107,11 @@ public class returnVal {
         return s;
     }
 
+
+    /**
+     *  Function to build a nice string, of the requested fields of the tools.
+     *  Purpose is to print the string to a label.
+     * */
     public String printBuilder(int actMachine){
 
         List<Tools> allTools = new ArrayList<>();
@@ -106,7 +138,11 @@ public class returnVal {
 
     }
 
-    public int avrageAbrassion(int actMachine){
+    /**
+     * A function to calculate the average abrasion, of tools
+     * that belongs to a given machine.
+     * */
+    public int avrageAbrasion(int actMachine){
 
         List<Tools> allTools = new ArrayList<>();
 
