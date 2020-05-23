@@ -9,7 +9,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * Class representing a CNC tool.
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -17,7 +19,10 @@ import javax.persistence.Table;
 @Table(name="Tools")
 public class Tools {
 
-
+    /**
+     * These filed represents, the attributes of a CNC tool.
+     * They also get initialized as table columns.
+     */
     @Id
     @Column(name = "ID")
     private int toolId;
