@@ -8,6 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import model.Machines;
+import org.tinylog.Logger;
+
 import java.util.List;
 
 
@@ -55,7 +57,7 @@ public class NewValueController {
         em.getTransaction().commit();
         em.close();
         emf.close();
-
+        Logger.trace("Add button was used");
         infoLabel.setText("Added successfully");
     }
 }

@@ -1,6 +1,7 @@
 package model;
 
 import com.mysql.cj.x.protobuf.MysqlxDatatypes;
+import org.tinylog.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -74,23 +75,6 @@ public class returnVal {
     public String mappedTools()
 
     {
-
-        /*
-        String exp;
-        List<Gepek> akt = new ArrayList<>();
-
-        akt = getGepek();
-
-
-        int size = akt.size();
-
-        for ( int i =0; i < size ; i++)
-        {
-            System.out.print(akt.get(i).getNev());
-        }
-        Gepek aktGep = new Gepek();
-        aktGep = getGepek().get(1);
-        String p  = aktGep.getNev();*/
         String s = getTools().stream().map(Tools::toString).collect(Collectors.joining(",\n"));
 
         return s;
@@ -102,8 +86,8 @@ public class returnVal {
 
         allTools = getStaticTools();
 
-        System.out.println(allTools.get(1).getName());
 
+        Logger.trace("Printing out one element {}",allTools.get(1).getName());
         String result="";
         for (int i = 0 ; i < allTools.size() ; i++){
 
@@ -111,7 +95,7 @@ public class returnVal {
            //   System.out.println(actMachine);
 
             if (allTools.get(i).getMachineId() == actMachine) {
-                System.out.println("this is happaning");
+                Logger.debug("The program entered the loop");
                result += "Name: " + allTools.get(i).getName() + " Abrasion: " + allTools.get(i).getAbrasion() +"% Material: " + allTools.get(i).getMaterial() +"\n";
 
             }

@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import main.MyApp;
 import model.Machines;
 import model.returnVal;
+import org.tinylog.Logger;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -68,7 +69,9 @@ public class MyController {
 
     @FXML
     public void initialize(){
-         val = new returnVal();
+
+        Logger.trace("Program started");
+        val = new returnVal();
     }
 
     public String selectedMachine(){
@@ -100,7 +103,8 @@ public class MyController {
         List<Machines> allMachines = new ArrayList<>();
 
         allMachines = val.getStaticMachines();
-        System.out.print(selectedMachine());
+        Logger.trace("Current machine {}",this::selectedMachine);
+      //  System.out.print(selectedMachine());
 
         int actMachine=0;
         for (int i=0; i < allMachines.size() ; i++)
