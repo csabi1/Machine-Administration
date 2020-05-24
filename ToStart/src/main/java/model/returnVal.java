@@ -71,24 +71,6 @@ public class returnVal {
         return names;
     }
 
-    public List<Integer> listOfWeight(){
-        List<Machines> akt = new ArrayList<>();
-
-        akt = getMachines();
-
-        ArrayList<Integer> weights = new ArrayList<>();
-
-
-        int size = akt.size();
-
-        for ( int i =0; i < size ; i++)
-        {
-            weights.add(akt.get(i).getWeight());
-        }
-        return weights;
-    }
-
-
 
 
     /**
@@ -169,7 +151,7 @@ public class returnVal {
 
 
         int result=0;
-        int count  = 0;
+        int count  ;
         for ( count = 0 ; count < allTools.size() ; count++){
 
 
@@ -180,6 +162,6 @@ public class returnVal {
             }
 
         }
-        return result / (count-1);
+        return result / count;
     }
 }

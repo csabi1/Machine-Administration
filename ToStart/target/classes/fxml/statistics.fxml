@@ -80,12 +80,12 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="minReq" layoutX="287.0" layoutY="208.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+      <Label fx:id="minReq" layoutX="287.0" layoutY="208.0" prefHeight="29.0" prefWidth="249.0" text="infLabel">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="recSpc" layoutX="287.0" layoutY="235.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+      <Label fx:id="recSpc" layoutX="287.0" layoutY="235.0" prefHeight="29.0" prefWidth="257.0" text="infLabel">
          <font>
             <Font size="16.0" />
          </font>

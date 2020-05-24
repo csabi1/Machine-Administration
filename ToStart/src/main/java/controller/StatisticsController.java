@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import model.Machines;
 import model.Statistics;
-import model.returnVal;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;
@@ -36,7 +35,7 @@ public class StatisticsController {
 
     @FXML
     private Label recSpc;
-    
+
 
 
     @FXML
@@ -44,12 +43,26 @@ public class StatisticsController {
 
         Logger.trace("Statistics started");
         Statistics val = new Statistics();
-        List<Integer> akt = new ArrayList<>();
-        List<Machines> allMachines = new ArrayList<>();
-        allMachines = val.getMachines();
-        akt = val.listOfWeight(allMachines);
+        List<Integer> allWeight = new ArrayList<>();
+        List<Integer> allTools = new ArrayList<>();
+        List<Integer> allSpace = new ArrayList<>();
 
-        totalWeight.setText(val.sumOfWeigth(akt) + " kg");
+        List<Machines> allMachines = new ArrayList<>();
+
+        allMachines = val.getMachines();
+        allWeight = val.listOfWeight(allMachines);
+        allTools = val.listOfTools(allMachines);
+        allSpace = val.listOfFloor(allMachines);
+
+        totalMachines.setText(Integer.toString(allMachines.size()));
+        totalWeight.setText(val.sumOfWeight(allWeight) + " kg");
+        avgWeight.setText(val.avgWeight(allWeight) + " kg");
+        totalTools.setText(val.sumOfTools(allTools) + " pc");
+        avgTools.setText(val.avgTools(allTools) + " pc");
+        avgFloorSpace.setText(val.avgFloorSpace(allSpace) + " cm2");
+        minReq.setText(val.sumOfFloorSpace(allSpace)+ " cm2");
+        recSpc.setText(val.recFloorSpace(allSpace)+ " cm2");
+
     }
 
 }

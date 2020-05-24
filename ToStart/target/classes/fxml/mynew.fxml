@@ -11,11 +11,11 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyController">
     <children>
-        <Button fx:id="writeButt" layoutX="534.0" layoutY="76.0" mnemonicParsing="false" onAction="#iras" prefHeight="41.0" prefWidth="156.0" text="List of Machines" />
+        <Button fx:id="writeButt" layoutX="522.0" layoutY="25.0" mnemonicParsing="false" onAction="#iras" prefHeight="41.0" prefWidth="156.0" text="List of Machines" />
       <Button fx:id="reportButton" layoutX="201.0" layoutY="335.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="142.0" text="Get Report" visible="false" />
-      <Button fx:id="addButton" layoutX="466.0" layoutY="31.0" mnemonicParsing="false" onAction="#switchToAdd" prefHeight="29.0" prefWidth="56.0" text="New" />
+      <Button fx:id="addButton" layoutX="450.0" layoutY="31.0" mnemonicParsing="false" onAction="#switchToAdd" prefHeight="29.0" prefWidth="56.0" text="New" />
       <ChoiceBox fx:id="listOfMach" layoutX="22.0" layoutY="31.0" prefHeight="29.0" prefWidth="422.0" />
-      <Button fx:id="getToolReport" layoutX="534.0" layoutY="31.0" mnemonicParsing="false" onAction="#newToolReport" prefHeight="41.0" prefWidth="156.0" text="Get Tool report" />
+      <Button fx:id="getToolReport" layoutX="22.0" layoutY="76.0" mnemonicParsing="false" onAction="#newToolReport" prefHeight="41.0" prefWidth="156.0" text="Get Tool report" />
       <SplitPane dividerPositions="0.3643410852713178" layoutX="22.0" layoutY="128.0" prefHeight="353.0" prefWidth="647.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -26,32 +26,32 @@
                   <Label layoutX="14.0" layoutY="262.0" text="Weight:" />
                   <Label layoutX="14.0" layoutY="315.0" prefHeight="16.0" prefWidth="51.0" text="Space:" />
                   <Label layoutX="14.0" layoutY="57.0" text="Name:" />
-                  <Label fx:id="macId" layoutX="116.0" layoutY="108.0" prefHeight="9.0" prefWidth="267.0" text="NAME">
+                  <Label fx:id="macId" layoutX="116.0" layoutY="108.0" prefHeight="9.0" prefWidth="267.0" text=" -">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="macMotor" layoutX="116.0" layoutY="160.0" prefHeight="8.0" prefWidth="259.0" text="NAME">
+                  <Label fx:id="macMotor" layoutX="116.0" layoutY="160.0" prefHeight="8.0" prefWidth="259.0" text=" - ">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="macTools" layoutX="116.0" layoutY="212.0" prefHeight="4.0" prefWidth="247.0" text="NAME">
+                  <Label fx:id="macTools" layoutX="116.0" layoutY="212.0" prefHeight="4.0" prefWidth="247.0" text=" - ">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="macWeight" layoutX="116.0" layoutY="262.0" prefHeight="4.0" prefWidth="247.0" text="NAME">
+                  <Label fx:id="macWeight" layoutX="116.0" layoutY="262.0" prefHeight="4.0" prefWidth="247.0" text=" - ">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="macSpace" layoutX="116.0" layoutY="315.0" prefHeight="16.0" prefWidth="279.0" text="NAME">
+                  <Label fx:id="macSpace" layoutX="116.0" layoutY="315.0" prefHeight="16.0" prefWidth="279.0" text=" - ">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="macName" layoutX="116.0" layoutY="57.0" prefHeight="16.0" prefWidth="279.0" text="NAME">
+                  <Label fx:id="macName" layoutX="116.0" layoutY="57.0" prefHeight="16.0" prefWidth="279.0" text=" -">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
@@ -75,7 +75,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="avgAbrasion" layoutX="164.0" layoutY="205.0" prefHeight="21.0" prefWidth="216.0" text="NAME">
+                  <Label fx:id="avgAbrasion" layoutX="164.0" layoutY="205.0" prefHeight="21.0" prefWidth="216.0" text=" -">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -85,11 +85,6 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <Label fx:id="reportLabel" layoutX="22.0" layoutY="86.0" text="Report:">
-         <font>
-            <Font name="DejaVu Sans Mono Bold" size="17.0" />
-         </font>
-      </Label>
-      <Button fx:id="statButton" layoutX="366.0" layoutY="76.0" mnemonicParsing="false" onAction="#startStatistics" prefHeight="41.0" prefWidth="156.0" text="Button" />
+      <Button fx:id="statButton" layoutX="522.0" layoutY="76.0" mnemonicParsing="false" onAction="#startStatistics" prefHeight="41.0" prefWidth="156.0" text="Machine Statistics" />
     </children>
 </Pane>
