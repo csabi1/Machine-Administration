@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/** Constructs */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -19,7 +21,7 @@ import javax.persistence.Table;
 /**
 * Class representing a CNC machine.
 */
-@Table(name="Machines")
+@Table(name = "Machines")
 public class Machines {
 
     /**

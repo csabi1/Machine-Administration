@@ -16,8 +16,9 @@ public class Statistics {
     /**
      * Method to get all machines from database.
      * It's only required, so the other methods could get the machines.
+     * @return with the selected data.
      * */
-    public static List<Machines> getMachines(){
+    public static List<Machines> getMachines() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
         try{
@@ -34,7 +35,7 @@ public class Statistics {
      * @param mach here it gets the list of machines.
      * @return a list of only the weights.
      * */
-    public List<Integer> listOfWeight(List<Machines> mach){
+    public List<Integer> listOfWeight(List<Machines> mach) {
 
 
         ArrayList<Integer> weights = new ArrayList<>();
@@ -54,7 +55,7 @@ public class Statistics {
      * @param mach here it gets the list of machines.
      * @return a list of only the tools_count (how many tools a CNC machine have).
      * */
-    public List<Integer> listOfTools(List<Machines> mach){
+    public List<Integer> listOfTools(List<Machines> mach) {
 
         ArrayList<Integer> tools = new ArrayList<>();
 
@@ -73,7 +74,7 @@ public class Statistics {
      * @param mach here it gets the list of machines.
      * @return a list of only the floor space.
      * */
-    public List<Integer> listOfFloor(List<Machines> mach){
+    public List<Integer> listOfFloor(List<Machines> mach) {
 
         ArrayList<Integer> tools = new ArrayList<>();
 
@@ -94,7 +95,7 @@ public class Statistics {
      * @param mach here it gets the list of machines.
      * @return a list of only the names.
      * */
-    private List<String> getListOfNames(){
+    private List<String> getListOfNames() {
         returnVal val = new returnVal();
         List<String> temp  = new ArrayList<>();
         temp  = val.listOfNames();
@@ -122,7 +123,7 @@ public class Statistics {
      * @param myList List of integers.
      * @return the average of the weights list.
      * */
-    public int avgWeight(List<Integer> myList){
+    public int avgWeight(List<Integer> myList) {
         int res=0;
         int i;
         for (i = 0; i < myList.size(); i++){
@@ -139,7 +140,7 @@ public class Statistics {
      * */
     public int sumOfTools(List<Integer> myList) {
         int res = 0;
-        for (int i = 0; i < myList.size(); i++){
+        for (int i = 0; i < myList.size(); i++) {
             res += myList.get(i);
         }
         return res;
@@ -151,10 +152,10 @@ public class Statistics {
      * @param myList List of integers.
      * @return the average of the tools list.
      * */
-    public int avgTools(List<Integer> myList){
+    public int avgTools(List<Integer> myList) {
         int res=0;
         int i;
-        for (i = 0; i < myList.size(); i++){
+        for (i = 0; i < myList.size(); i++) {
             res += myList.get(i);
         }
         res = res / i;
@@ -169,7 +170,7 @@ public class Statistics {
      * */
     public int sumOfFloorSpace(List<Integer> myList) {
         int res = 0;
-        for (int i = 0; i < myList.size(); i++){
+        for (int i = 0; i < myList.size(); i++) {
             res += myList.get(i);
         }
         return res;
@@ -181,10 +182,10 @@ public class Statistics {
      * @param myList List of integers.
      * @return the average of the tools list.
      * */
-    public int avgFloorSpace(List<Integer> myList){
+    public int avgFloorSpace(List<Integer> myList) {
         int res=0;
         int i;
-        for (i = 0; i < myList.size(); i++){
+        for (i = 0; i < myList.size(); i++) {
             res += myList.get(i);
         }
         res = res / i;
@@ -197,10 +198,10 @@ public class Statistics {
      * @param myList A list containing the minimum  space requirement of the machines.
      * @return The recommended space for the machines.
      * */
-    public int recFloorSpace(List<Integer> myList){
+    public int recFloorSpace(List<Integer> myList) {
         int res=0;
         int i;
-        for (i = 0; i < myList.size(); i++){
+        for (i = 0; i < myList.size(); i++) {
             res += myList.get(i);
             res += 120;
         }
