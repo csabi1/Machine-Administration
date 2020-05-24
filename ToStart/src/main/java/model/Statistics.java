@@ -9,7 +9,7 @@ import java.util.List;
 public class Statistics {
 
 
-    private static List<Machines> getMachines(){
+    public static List<Machines> getMachines(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
         try{
@@ -21,10 +21,10 @@ public class Statistics {
 
     }
 
-    public List<Integer> listOfWeight(){
+    public List<Integer> listOfWeight(List<Machines> mach){
         List<Machines> akt = new ArrayList<>();
 
-        akt = getMachines();
+        akt = mach;
 
         ArrayList<Integer> weights = new ArrayList<>();
 

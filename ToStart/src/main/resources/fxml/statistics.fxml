@@ -2,10 +2,93 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatisticsController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatisticsController">
    <children>
-      <Label fx:id="infLabel" layoutX="193.0" layoutY="119.0" text="Label" />
+      <Label fx:id="totalWeight" layoutX="158.0" layoutY="115.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="110.0" layoutY="22.0" prefHeight="41.0" prefWidth="404.0" text="Statistics of the machines">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="119.0" prefHeight="19.0" prefWidth="102.0" text="Total weight:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="158.0" prefHeight="19.0" prefWidth="138.0" text="Avarage weigth:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="79.0" text="Total machines:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="79.0" text="Total tools:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="119.0" text="Avrage tools:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="213.0" text="Minimum floor space required:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="240.0" text="Recomanded floor space:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="158.0" text="Avrage floor space:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalMachines" layoutX="158.0" layoutY="74.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="avgWeight" layoutX="158.0" layoutY="153.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalTools" layoutX="475.0" layoutY="74.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="avgTools" layoutX="475.0" layoutY="115.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="avgFloorSpace" layoutX="475.0" layoutY="153.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="minReq" layoutX="287.0" layoutY="208.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="recSpc" layoutX="287.0" layoutY="235.0" prefHeight="29.0" prefWidth="76.0" text="infLabel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

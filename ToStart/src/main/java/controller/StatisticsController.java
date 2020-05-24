@@ -2,6 +2,7 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import model.Machines;
 import model.Statistics;
 import model.returnVal;
 import org.tinylog.Logger;
@@ -13,7 +14,30 @@ public class StatisticsController {
 
 
     @FXML
-    private Label infLabel;
+    private Label totalWeight;
+
+    @FXML
+    private Label totalMachines;
+
+    @FXML
+    private Label avgWeight;
+
+    @FXML
+    private Label totalTools;
+
+    @FXML
+    private Label avgTools;
+
+    @FXML
+    private Label avgFloorSpace;
+
+    @FXML
+    private Label minReq;
+
+    @FXML
+    private Label recSpc;
+    
+
 
     @FXML
     public void initialize(){
@@ -21,9 +45,11 @@ public class StatisticsController {
         Logger.trace("Statistics started");
         Statistics val = new Statistics();
         List<Integer> akt = new ArrayList<>();
-        akt = val.listOfWeight();
+        List<Machines> allMachines = new ArrayList<>();
+        allMachines = val.getMachines();
+        akt = val.listOfWeight(allMachines);
 
-        infLabel.setText(val.sumOfWeigth(akt) + " kg");
+        totalWeight.setText(val.sumOfWeigth(akt) + " kg");
     }
 
 }
