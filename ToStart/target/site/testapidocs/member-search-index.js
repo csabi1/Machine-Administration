@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"StatisticsTest","l":"StatisticsTest()","url":"%3Cinit%3E()"}]
