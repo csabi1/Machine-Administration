@@ -23,10 +23,10 @@ public class returnVal {
     /**
      * Function to get, the list of machines from database.
      * */
-    private static List<Machines> getMachines(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
+    private static List<Machines> getMachines() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("gep-mysql");
         EntityManager em = emf.createEntityManager();
-        try{
+        try {
             return em.createQuery("select l from Machines l ORDER BY l",Machines.class).getResultList();
         } finally {
             em.close();
@@ -38,10 +38,10 @@ public class returnVal {
     /**
      * Function to get, the list of tools from database.
      * */
-    private static List<Tools> getTools(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
+    private static List<Tools> getTools() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("gep-mysql");
         EntityManager em = emf.createEntityManager();
-        try{
+        try {
             return em.createQuery("select l from Tools l ORDER BY l",Tools.class).getResultList();
         } finally {
             em.close();
@@ -64,7 +64,7 @@ public class returnVal {
 
         int size = akt.size();
 
-        for ( int i =0; i < size ; i++)
+        for (int i =0; i < size; i++)
         {
             names.add(akt.get(i).getName());
         }
@@ -76,7 +76,7 @@ public class returnVal {
     /**
      * Function that makes an ArrayList of the machine list.
      * */
-    public static List<Machines> getStaticMachines(){
+    public static List<Machines> getStaticMachines() {
         List<Machines> allMachines = new ArrayList<>();
 
         allMachines = getMachines();
@@ -88,7 +88,7 @@ public class returnVal {
     /**
      * Function that makes an ArrayList of the tools list.
      * */
-    public static List<Tools> getStaticTools(){
+    public static List<Tools> getStaticTools() {
         List<Tools> allTools = new ArrayList<>();
 
         allTools = getTools();
@@ -113,7 +113,7 @@ public class returnVal {
      *  Function to build a nice string, of the requested fields of the tools.
      *  Purpose is to print the string to a label.
      * */
-    public String printBuilder(int actMachine){
+    public String printBuilder(int actMachine) {
 
         List<Tools> allTools = new ArrayList<>();
 
@@ -122,7 +122,7 @@ public class returnVal {
 
         Logger.trace("Printing out one element {}",allTools.get(1).getName());
         String result="";
-        for (int i = 0 ; i < allTools.size() ; i++){
+        for (int i = 0 ; i < allTools.size(); i++){
 
 
             if (allTools.get(i).getMachineId() == actMachine) {
@@ -141,14 +141,14 @@ public class returnVal {
      * A function to calculate the average abrasion, of tools
      * that belongs to a given machine.
      * */
-    public int averageAbrasion(int actMachine, List<Tools> allTools){
+    public int averageAbrasion(int actMachine, List<Tools> allTools) {
 
 
 
 
         int result=0;
-        int count  ;
-        for ( count = 0 ; count < allTools.size() ; count++){
+        int count;
+        for (count = 0; count < allTools.size(); count++) {
 
 
             if (allTools.get(count).getMachineId() == actMachine) {

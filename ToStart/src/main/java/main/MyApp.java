@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 public class MyApp extends Application {
 
     /**
-     * This method will start the program*/
+     * This method will start the program.*/
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(MyApp.class.getResource("/fxml/mynew.fxml"));

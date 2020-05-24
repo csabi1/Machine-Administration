@@ -19,9 +19,9 @@ public class Statistics {
      * @return with the selected data.
      * */
     public static List<Machines> getMachines() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("gep-mysql");
         EntityManager em = emf.createEntityManager();
-        try{
+        try {
             return em.createQuery("select l from Machines l ORDER BY l",Machines.class).getResultList();
         } finally {
             em.close();
@@ -62,7 +62,7 @@ public class Statistics {
 
         int size = mach.size();
 
-        for ( int i =0; i < size ; i++)
+        for (int i = 0; i < size; i++)
         {
             tools.add(mach.get(i).getTools_count());
         }
@@ -81,7 +81,7 @@ public class Statistics {
 
         int size = mach.size();
 
-        for ( int i =0; i < size ; i++)
+        for (int i = 0; i < size; i++)
         {
             tools.add(Integer.parseInt(mach.get(i).getFloor_space()));
         }

@@ -27,30 +27,36 @@ public class Tools {
     @Column(name = "ID")
     private int toolId;
 
+    /**Variable for name*/
     @Column(name = "Name")
     private String name;
 
-
+    /**Variable for condition*/
     @Column(name = "Cond")
     private String condition;
 
+    /**Variable for machine id*/
     @Column(name = "Machine_ID")
     private int machineId;
 
+    /**Variable for weight*/
     @Column(name = "Weight")
     private int weight;
 
+    /**Variable for material*/
     @Column(name ="Material")
     private String material;
 
+    /**Variable for abrasion*/
     @Column(name = "Abrasion")
     private int abrasion;
 
+    /**Variable for grade*/
     @Column(name ="Grade")
     private String grade;
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value machineId;
      */
     public int getMachineId() {
@@ -68,7 +74,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value toolId;
      */
     public int getToolId() {
@@ -77,7 +83,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value condition;
      */
     public String getCondition() {
@@ -86,7 +92,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value weight;
      */
     public int getWeight() {
@@ -95,7 +101,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value name;
      */
     public String getName() {
@@ -104,7 +110,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value material;
      */
     public String getMaterial() {
@@ -113,7 +119,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value abrasion;
      */
     public int getAbrasion() {
@@ -122,7 +128,7 @@ public class Tools {
 
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value grade;
      */
     public String getGrade() {

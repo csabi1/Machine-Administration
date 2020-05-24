@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-/** Constructs */
+/** Constructs. */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -32,58 +32,65 @@ public class Machines {
     @Column(name = "ID")
     private int id;
 
-
+    /**Variable for tools count.*/
     @Column(name = "Tools_count")
     private int tools_count;
 
-
+    /**Variable for weight.*/
     @Column(name = "Weight")
     private int Weight;
 
-
+    /**Variable for name*/
     @Column(name = "Name")
     private String name;
 
+    /**Variable for motor*/
     @Column(name = "Motor")
     private String motor;
 
+    /**Variable for floor space */
     @Column(name = "Floor_Space")
     private String floor_space;
 
+
+    /**
+     * Simple getter.
+     * @return the value id;
+     */
     public int getId() {
         return id;
     }
 
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value tools_count;
      */
     public int getTools_count() {
         return tools_count;
     }
     /**
-     * Simple getter
+     * Simple getter.
      * @return the value tools_count;
      */
     public int getWeight() {
         return Weight;
     }
     /**
-     * Simple getter
+     * Simple getter.
      * @return the name;
      */
     public String getName() {
         return name;
     }
     /**
-     * Simple getter
+     * Simple getter.
      * @return the motor specs;
      */
     public String getMotor() {
         return motor;
     }
     /**
-     * Simple getter
+     * Simple getter.
      * @return the floor space;
      */
     public String getFloor_space() {
@@ -91,7 +98,7 @@ public class Machines {
     }
 
     /**
-     * Simple setter.
+     * Simple setter..
      * @param id the field that will be set.
      */
     public void setId(int id) {

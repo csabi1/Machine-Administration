@@ -9,7 +9,8 @@ import javafx.application.Application;
 public class Main {
 
     /**
-     * Starting the app*/
+     * Starting the app.
+     * @param args is the args default param. */
     public static void main(String[] args)  {
         Application.launch(MyApp.class, args);
 
