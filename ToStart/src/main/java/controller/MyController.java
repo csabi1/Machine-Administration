@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.MyApp;
 import model.Machines;
+import model.Tools;
 import model.returnVal;
 import org.tinylog.Logger;
 
@@ -103,6 +104,11 @@ public class MyController {
         List<Machines> allMachines = new ArrayList<>();
 
         allMachines = val.getStaticMachines();
+
+        List<Tools> allTools = new ArrayList<>();
+
+        allTools = val.getStaticTools();
+
         Logger.trace("Current machine {}",this::selectedMachine);
       //  System.out.print(selectedMachine());
 
@@ -131,8 +137,12 @@ public class MyController {
 
 
         //toolsLabel.setText(val.mappedTools());
-        double avgAbresion = val.avrageAbrasion(actMachine);
+        double avgAbresion = val.avrageAbrasion(actMachine, allTools);
         toolsLabel.setText(val.printBuilder(actMachine));
+
+
+
+
         avgAbrasion.setText(avgAbresion+" %");
         abrasionProg.setProgress(avgAbresion/100);
 
