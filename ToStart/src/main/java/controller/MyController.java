@@ -17,11 +17,6 @@ import model.returnVal;
 import org.tinylog.Logger;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -137,7 +132,7 @@ public class MyController {
 
 
         //toolsLabel.setText(val.mappedTools());
-        double avgAbresion = val.avrageAbrasion(actMachine, allTools);
+        double avgAbresion = val.averageAbrasion(actMachine, allTools);
         toolsLabel.setText(val.printBuilder(actMachine));
 
 

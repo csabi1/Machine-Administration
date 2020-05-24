@@ -141,7 +141,7 @@ public class returnVal {
      * A function to calculate the average abrasion, of tools
      * that belongs to a given machine.
      * */
-    public int avrageAbrasion(int actMachine, List<Tools> allTools){
+    public int averageAbrasion(int actMachine, List<Tools> allTools){
 
 
 
