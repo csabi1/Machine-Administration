@@ -9,6 +9,14 @@
     <version>1.0-SNAPSHOT</version>
     <description>Administration application for CNC machines</description>
 
+
+    <scm>
+        <connection>scm:svn:https://github.com/csabi1/Machine-Administration</connection>
+        <developerConnection>scm:svn:https://github.com/csabi1/Machine-Administration</developerConnection>
+        <url>https://github.com/csabi1/Machine-Administration</url>
+    </scm>
+
+
     <developers>
         <developer>
             <id>csabi1</id>
@@ -143,6 +151,11 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.5</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
