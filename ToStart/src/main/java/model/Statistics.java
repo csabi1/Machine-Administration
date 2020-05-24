@@ -6,9 +6,17 @@ import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is used by the StatisticsController.
+ * It's purpose to calculate statistics for all machines in the database.
+ * */
 public class Statistics {
 
 
+    /**
+     * Method to get all machines from database.
+     * It's only required, so the other methods could get the machines.
+     * */
     public static List<Machines> getMachines(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(  "gep-mysql");
         EntityManager em = emf.createEntityManager();
@@ -21,6 +29,11 @@ public class Statistics {
 
     }
 
+    /**
+     * Method for listing only the weights from a list of machine.
+     * @param mach here it gets the list of machines.
+     * @return a list of only the weights.
+     * */
     public List<Integer> listOfWeight(List<Machines> mach){
 
 
@@ -36,7 +49,11 @@ public class Statistics {
         return weights;
     }
 
-
+    /**
+     * Method for listing only the weights from a list of machine.
+     * @param mach here it gets the list of machines.
+     * @return a list of only the tools_count (how many tools a CNC machine have).
+     * */
     public List<Integer> listOfTools(List<Machines> mach){
 
         ArrayList<Integer> tools = new ArrayList<>();
@@ -51,6 +68,11 @@ public class Statistics {
         return tools;
     }
 
+    /**
+     * Method for listing only the weights from a list of machine.
+     * @param mach here it gets the list of machines.
+     * @return a list of only the floor space.
+     * */
     public List<Integer> listOfFloor(List<Machines> mach){
 
         ArrayList<Integer> tools = new ArrayList<>();
@@ -67,7 +89,11 @@ public class Statistics {
 
 
 
-
+    /**
+     * Method for listing only the weights from a list of machine.
+     * @param mach here it gets the list of machines.
+     * @return a list of only the names.
+     * */
     private List<String> getListOfNames(){
         returnVal val = new returnVal();
         List<String> temp  = new ArrayList<>();
@@ -76,7 +102,12 @@ public class Statistics {
     }
 
 
-
+    /**
+     * It calculates the sum of the given list.
+     * It is used for the Weights list.
+     * @param myList a list of integers.
+     * @return a sum of the list.
+     * */
     public int sumOfWeight(List<Integer> myList) {
         int res = 0;
         for (int i = 0; i < myList.size(); i++){
@@ -85,6 +116,12 @@ public class Statistics {
         return res;
     }
 
+
+    /**
+     * Method to calculate the average of the weights given.
+     * @param myList List of integers.
+     * @return the average of the weights list.
+     * */
     public int avgWeight(List<Integer> myList){
         int res=0;
         int i;
@@ -94,7 +131,12 @@ public class Statistics {
         res = res / i;
         return res;
     }
-
+    /**
+     * It calculates the sum of the given list.
+     * It is used for the Tools list.
+     * @param myList a list of integers.
+     * @return a sum of the list.
+     * */
     public int sumOfTools(List<Integer> myList) {
         int res = 0;
         for (int i = 0; i < myList.size(); i++){
@@ -103,6 +145,12 @@ public class Statistics {
         return res;
     }
 
+
+    /**
+     * Method to calculate the average of the tools given.
+     * @param myList List of integers.
+     * @return the average of the tools list.
+     * */
     public int avgTools(List<Integer> myList){
         int res=0;
         int i;
@@ -113,6 +161,12 @@ public class Statistics {
         return res;
     }
 
+    /**
+     * It calculates the sum of the given list.
+     * It is used for the FloorSpace list.
+     * @param myList a list of integers.
+     * @return a sum of the list.
+     * */
     public int sumOfFloorSpace(List<Integer> myList) {
         int res = 0;
         for (int i = 0; i < myList.size(); i++){
@@ -121,6 +175,12 @@ public class Statistics {
         return res;
     }
 
+
+    /**
+     * Method to calculate the average of the tools given.
+     * @param myList List of integers.
+     * @return the average of the tools list.
+     * */
     public int avgFloorSpace(List<Integer> myList){
         int res=0;
         int i;
@@ -131,6 +191,12 @@ public class Statistics {
         return res;
     }
 
+
+    /**
+     * Method that calculates a recommended space for the CNC machines.
+     * @param myList A list containing the minimum  space requirement of the machines.
+     * @return The recommended space for the machines.
+     * */
     public int recFloorSpace(List<Integer> myList){
         int res=0;
         int i;

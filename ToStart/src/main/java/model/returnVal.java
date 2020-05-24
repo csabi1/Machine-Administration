@@ -124,8 +124,6 @@ public class returnVal {
         String result="";
         for (int i = 0 ; i < allTools.size() ; i++){
 
-           // System.out.println(allTools.get(i).getMachineId());
-           //   System.out.println(actMachine);
 
             if (allTools.get(i).getMachineId() == actMachine) {
                 Logger.debug("The program entered the loop");
